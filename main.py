@@ -60,6 +60,7 @@ def main():
 
     target_pressed = 0
     clicks = 0
+    misses = 0
     start_time = time.time()
 
     pygame.time.set_timer(TARGET_EVENT, TARGET_INCREMENT)
@@ -83,6 +84,7 @@ def main():
 
             if target.size <= 0:
                 targets.remove(target)
+                misses += 1
 
         draw(WIN, targets)
 
