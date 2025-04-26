@@ -67,6 +67,7 @@ def main():
 
     while run:
         clock.tick(60)
+        click = False
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -79,6 +80,10 @@ def main():
                 target = Target(x, y)
                 targets.append(target)
         
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                click = True
+                clicks += 1
+
         for target in targets:
             target.update()
 
