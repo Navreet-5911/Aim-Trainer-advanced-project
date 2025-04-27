@@ -102,6 +102,8 @@ def main():
                 targets.remove(target)
                 target_pressed += 1
 
+        if misses >= LIVES:
+            pass   # end game
         draw(WIN, targets)
 
     pygame.quit()
