@@ -15,6 +15,7 @@ TARGET_EVENT = pygame.USEREVENT
 TARGET_PADDING = 30
 
 BG_COLOR = (0, 25, 40)
+LIVES = 5
 
 class Target:
     MAX_SIZE = 30
