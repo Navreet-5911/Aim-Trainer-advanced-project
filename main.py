@@ -16,6 +16,7 @@ TARGET_PADDING = 30
 
 BG_COLOR = (0, 25, 40)
 LIVES = 5
+TOP_BAR_HEIGHT = 50
 
 class Target:
     MAX_SIZE = 30
@@ -75,6 +76,7 @@ def main():
         clock.tick(60)
         click = False
         mouse_pos = pygame.mouse.get_pos()
+        elapsed_time = time.time() - start_time
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -105,6 +107,7 @@ def main():
         if misses >= LIVES:
             pass   # end game
         draw(WIN, targets)
+        draw_top_bar(WIN, elapsed_time, target_pressed, misses)
 
     pygame.quit()
 
