@@ -72,6 +72,8 @@ def draw_top_bar(win, elapsed_time, targets_pressed, misses):
     pygame.draw.rect(win, "aqua", (0, 0, WIDTH, TOP_BAR_HEIGHT ))
     time_label = LABEL_FONT.render(f"Time: {format_time(elapsed_time)}", 1, "black")
 
+    speed = round(targets_pressed / elapsed_time, 1)
+    speed_label  = LABEL_FONT.render(f"Speed: {speed} t/s", 1, "black")
 
     win.blit(time_label, (5, 5))
 
