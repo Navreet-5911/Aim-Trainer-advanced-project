@@ -74,6 +74,9 @@ def draw_top_bar(win, elapsed_time, targets_pressed, misses):
 
     speed = round(targets_pressed / elapsed_time, 1)
     speed_label  = LABEL_FONT.render(f"Speed: {speed} t/s", 1, "black")
+    hits_label  = LABEL_FONT.render(f"Hits: {targets_pressed}", 1, "black")
+    
+    lives_label = LABEL_FONT.render(f"Lives: {LIVES - misses}", 1, "black")
 
     win.blit(time_label, (5, 5))
 
