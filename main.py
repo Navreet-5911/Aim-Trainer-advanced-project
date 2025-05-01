@@ -92,6 +92,10 @@ def end_screen(win, elapsed_time, targets_pressed, clicks):
     speed_label  = LABEL_FONT.render(f"Speed: {speed} t/s", 1, "white")
 
     hits_label  = LABEL_FONT.render(f"Hits: {targets_pressed}", 1, "white")
+    accuracy =round(targets_pressed / clicks * 100, 1)
+    accuracy_label  = LABEL_FONT.render(f"Accuracy: {accuracy}%", 1, "white")
+    
+    win.blit(time_label, (5, 5))
 def main():
     run = True
     targets = []
