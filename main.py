@@ -91,6 +91,7 @@ def end_screen(win, elapsed_time, targets_pressed, clicks):
     speed = round(targets_pressed / elapsed_time, 1)
     speed_label  = LABEL_FONT.render(f"Speed: {speed} t/s", 1, "white")
 
+    hits_label  = LABEL_FONT.render(f"Hits: {targets_pressed}", 1, "white")
 def main():
     run = True
     targets = []
