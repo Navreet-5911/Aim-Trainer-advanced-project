@@ -100,6 +100,13 @@ def end_screen(win, elapsed_time, targets_pressed, clicks):
     win.blit(hits_label, (get_middle(hits_label), 300))
     win.blit(accuracy_label, (get_middle(accuracy_label), 400))
 
+    pygame.display.update()
+
+    run = True
+    while run:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT or event.type == pygame.KEYDOWN:
+                quit()
     win.blit(time_label, (5, 5))
 def main():
     run = True
