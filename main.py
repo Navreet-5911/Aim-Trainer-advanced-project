@@ -157,6 +157,14 @@ def main():
                 click = True
                 clicks += 1
 
+                hit = False
+                for target in targets:
+                    if target.collide(*mouse_pos):
+                        target.was_clicked = True
+                        targets.remove(target)
+                        targets_pressed += 1
+                        hit = True
+                        break
         for target in targets:
             target.update()
 
