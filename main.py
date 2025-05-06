@@ -207,9 +207,13 @@ def main():
             end_screen(WIN, elapsed_time, targets_pressed, clicks)
             pass   # end game
         draw(WIN, targets)
+        draw_top_bar(WIN, elapsed_time, targets_pressed, misses)
+        pygame.display.update()
         draw_top_bar(WIN, elapsed_time, target_pressed, misses)
 
     pygame.quit()
 
 if __name__ == "__main__":
     main()
+    main()    main()
+    main()    
