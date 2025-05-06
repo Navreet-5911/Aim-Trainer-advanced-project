@@ -165,6 +165,9 @@ def main():
                 break
 
             if event.type == TARGET_EVENT:
+                x = random.randint(TARGET_PADDING, WIDTH - TARGET_PADDING)
+                y = random.randint(
+                    TARGET_PADDING + TOP_BAR_HEIGHT, HEIGHT - TARGET_PADDING)
                 x = random.randint(TARGET_PADDING, WIDTH - TARGET_PADDING)  
                 y = random.randint(TARGET_PADDING + TOP_BAR_HEIGHT, HEIGHT - TARGET_PADDING)
                 y = random.randint(TARGET_PADDING, HEIGHT - TARGET_PADDING)
