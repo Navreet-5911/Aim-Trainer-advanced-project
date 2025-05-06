@@ -204,6 +204,7 @@ def main():
                 target_pressed += 1
 
         if misses >= LIVES:
+            end_screen(WIN, elapsed_time, targets_pressed, clicks)
             pass   # end game
         draw(WIN, targets)
         draw_top_bar(WIN, elapsed_time, target_pressed, misses)
