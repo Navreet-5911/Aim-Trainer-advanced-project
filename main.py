@@ -189,6 +189,8 @@ def main():
         for target in targets:
             target.update()
 
+                if not hit:
+                    misses += 1
             if target.size <= 0:
                 targets.remove(target)
                 misses += 1
