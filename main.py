@@ -195,6 +195,10 @@ def main():
                 targets.remove(target)
                 misses += 1
 
+        # Update all targets
+        for target in targets[:]:
+            target.update()
+            if not target.grow and target.size <= 0:
             if click and target.collide(*mouse_pos):
                 targets.remove(target)
                 target_pressed += 1
