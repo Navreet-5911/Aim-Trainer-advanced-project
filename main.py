@@ -67,6 +67,7 @@ def draw(win, targets):
     win.fill(BG_COLOR)
 
     for target in targets:
+        target.draw(win)
         target.draw(win) 
 
     pygame.display.update()
