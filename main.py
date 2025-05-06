@@ -69,6 +69,12 @@ def format_time(secs):
 
 
 def draw_top_bar(win, elapsed_time, targets_pressed, misses):
+    pygame.draw.rect(win, "grey", (0, 0, WIDTH, TOP_BAR_HEIGHT))
+    time_label = LABEL_FONT.render(
+        f"Time: {format_time(elapsed_time)}", 1, "black")
+    speed = round(targets_pressed / elapsed_time, 1) if elapsed_time > 0 else 0
+    speed_label = LABEL_FONT.render(f"Speed: {speed} t/s", 1, "black")
+    hits_label = LABEL_FONT.render(f"Hits: {targets_pressed}", 1, "black")
     pygame.draw.rect(win, "aqua", (0, 0, WIDTH, TOP_BAR_HEIGHT ))
     time_label = LABEL_FONT.render(f"Time: {format_time(elapsed_time)}", 1, "black")
 
