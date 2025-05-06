@@ -44,8 +44,12 @@ class Target:
 
     def draw(self, win):
         pygame.draw.circle(win, self.COLOR, (self.x, self.y), self.size)
+        pygame.draw.circle(win, self.SECOND_COLOR,
+                           (self.x, self.y), self.size * 0.8)
         pygame.draw.circle(win, self.SECOND_COLOR, (self.x, self.y), self.size * 0.8)
         pygame.draw.circle(win, self.COLOR, (self.x, self.y), self.size * 0.6)
+        pygame.draw.circle(win, self.SECOND_COLOR,
+                           (self.x, self.y), self.size * 0.4)
         pygame.draw.circle(win, self.SECOND_COLOR, (self.x, self.y), self.size * 0.4)
 
 
