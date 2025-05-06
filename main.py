@@ -123,10 +123,15 @@ def end_screen(win, elapsed_time, targets_pressed, clicks):
     while run:
         for event in pygame.event.get():
             if event.type == pygame.QUIT or event.type == pygame.KEYDOWN:
+                pygame.quit()
+                exit()
+
                 quit()
     win.blit(time_label, (5, 5))
 def get_middle(surface):
-    return WIDTH / 2 - surface.get_width()/2
+    return WIDTH / 2 - surface.get_width() / 2
+
+
 def main():
     run = True
     targets = []
