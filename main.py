@@ -59,6 +59,7 @@ class Target:
 
 
     def collide(self, x, y):
+        dis = math.sqrt((x - self.x) ** 2 + (y - self.y) ** 2)
         dis = math.sqrt((self.x - x)**2 + (self.y - y)**2)
         return dis <= self.size
 
