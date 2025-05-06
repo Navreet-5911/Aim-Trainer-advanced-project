@@ -34,6 +34,7 @@ class Target:
         self.y = y
         self.size = 0
         self.grow = True
+        self.was_clicked = False
 
 
     def update(self):
