@@ -145,6 +145,7 @@ def main():
     targets = []
     clock = pygame.time.Clock()
 
+    targets_pressed = 0
     target_pressed = 0
     clicks = 0
     misses = 0
