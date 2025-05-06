@@ -38,6 +38,7 @@ class Target:
 
 
     def update(self):
+        if self.size + self.GROWTH_RATE >= self.MAX_SIZE:
         if self.size + self.GROWTH_RATE  >= self.MAX_SIZE:
             self.grow = False
 
