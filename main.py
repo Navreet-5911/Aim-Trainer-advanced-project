@@ -2,7 +2,7 @@ import math
 import random
 import time
 import pygame
-pygame.init()
+
 
 pygame.init()
 WIDTH, HEIGHT = 832, 614
